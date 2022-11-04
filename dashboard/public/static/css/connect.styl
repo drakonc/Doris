@@ -4,8 +4,15 @@ body, html
     margin: 0px
     padding: 0px
 
+*
+    -webkit-transition: all 0.3s ease
+    webkit-transition: all 0.3s ease
+
 body
     background-color: #f9f9f9
+
+label
+    display: block
 
 .shadow
     box-shadow: 1px 7px 16px 1px rgba(0,0,0,0.12);
@@ -43,6 +50,42 @@ body
             margin: 0px
             text-align: center
             padding: 0px
+    .group
+        margin-top: 4px
+        position: relative
+        width: 100%
+        input
+            border: 1px solid #cccccc
+            border-radius: 8px
+            box-sizing: border-box
+            display: block
+            padding: 16px
+            padding-left: 48px
+            width: 100%
+            &:focus
+                outline: none
+                border: 1px solid #00b2ee
+        i
+            color: #2c2c2c
+            position: absolute
+            font-size: 1.4em
+            top: 13px
+            left: 18px
+            z-index: 1
+    .btn
+        background-color: #00b2ee
+        border: 1px solid #00b2ee
+        border-radius: 8px
+        color: #fff
+        display: block
+        font-size: 1.2em
+        font-weight: 500
+        padding: 12px
+        width: 100%
+        &:hover
+            background-color: #fff
+            color: #00b2ee
+
 
 
 

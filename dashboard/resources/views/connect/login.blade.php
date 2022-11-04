@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="{{ url('/static/css/connect.css') }}">
+    <link rel="stylesheet" href="{{ url('/static/css/connect.css?v='.time()) }}">
 
 </head>
 <body>
@@ -35,13 +35,13 @@
                         {!! Form::email('email',null,['class' => 'input']) !!}
                     </div>
 
-                    <label for="password">{{ __('lg.connect.password') }}:</label>
+                    <label for="password" class="mtop16">{{ __('lg.connect.password') }}:</label>
                     <div class="group">
                         <i class="bi bi-fingerprint"></i>
                         {!! Form::password('password',null,['class' => 'input']) !!}
                     </div>
 
-                    {!! Form::submit(__('lg.connect.connect', ['class' => 'btn mtop16']), ) !!}
+                    {!! Form::submit(__('lg.connect.connect'),['class' => 'btn mtop16']) !!}
                 {!! Form::close() !!}
             </div>
         </div>
