@@ -23,17 +23,21 @@ label
     margin-top: 16px !important
 
 .page
+    animation: AnimationName 40s ease infinite;
     align-items: center
+    background: linear-gradient(270deg, #00b2ee, #0088b6, #58c5ea);
+    background-size: 600% 600%;
     box-sizing: border-box
     display: flex
     justify-content: center
     height: 100vh
     width: 100%
+    -webkit-animation: AnimationName 40s ease infinite;
+    -moz-animation: AnimationName 40s ease infinite;
     .box
         background-color: #fff
-        border-bottom: 4px solid #00b2ee
-        border-radius: 8px
-        padding: 32px
+        border-radius: 16px
+        padding: 40px
         width: 480px
         .logo
             display: block
@@ -79,24 +83,55 @@ label
         color: #fff
         display: block
         font-size: 1.2em
-        font-weight: 500
+        font-weight: 600
         padding: 12px
         width: 100%
         &:hover
-            background-color: #fff
-            color: #00b2ee
+            background-color: #f7cd4c
+            border: 1px solid #f7cd4c
+            color: #222
 
 .page_app
     background-color: #fff
     .box
         background-color: transparent !important
-        border-bottom: 0px !important
         width: 100% !important
         .logo
             img
                 width: 60%
+        h2.title
+            color: #fff !important
+    label
+        color: #fff !important
+    .group
+        input
+            border: 0px !important;
+            &:focus
+                border: 0px !important;
+        i
+            top: 12px
+            left: 16px
+    .btn
+        background-color: #f7cd4c
+        border: 0px !important
+        color: #222
 
 
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
 
 
 

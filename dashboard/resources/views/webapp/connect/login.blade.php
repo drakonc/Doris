@@ -23,7 +23,7 @@
     <div class="page page_app">
         <div class="box">
             <div class="logo">
-                <img src="{{ url('/static/images/logo.png') }}" alt="{{ config("cms.app_name") }}">
+                <img src="{{ url('/static/images/logo-white.png') }}" alt="{{ config("cms.app_name") }}">
             </div>
             <h2 class="title mtop16"> {{ __('lg.connect.login') }} </h2>
             <div class="form mtop16">

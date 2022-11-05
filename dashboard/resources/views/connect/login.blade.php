@@ -21,7 +21,7 @@
 </head>
 <body>
     <div class="page">
-        <div class="box shadow">
+        <div class="box">
             <div class="logo">
                 <img src="{{ url('/static/images/logo.png') }}" alt="{{ config("cms.app_name") }}">
             </div>
