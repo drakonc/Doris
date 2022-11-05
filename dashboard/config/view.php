@@ -1,5 +1,15 @@
 <?php
 
+use Jenssegers\Agent\Agent;
+
+$agent = new Agent();
+
+if($agent->isMobile()):
+    $path_view = 'views/webapp';
+else:
+    $path_view = 'views';
+endif;
+
 return [
 
     /*
@@ -14,7 +24,7 @@ return [
     */
 
     'paths' => [
-        resource_path('views'),
+        resource_path($path_view),
     ],
 
     /*
