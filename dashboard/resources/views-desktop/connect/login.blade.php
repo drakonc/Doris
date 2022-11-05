@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="routeName" content="{{ Route::currentRouteName() }}">
-    <meta name="currency" content="{{ Config::get('madecms.currency') }}">
     <meta name="auth" content="{{ Auth::check() }}">
 
     <title>{{ __('lg.connect.login') }} - Doris APP</title>
@@ -20,6 +19,7 @@
 
 </head>
 <body>
+    @include('components.loader_action')
     <div class="page">
         <div class="box">
             <div class="logo">
@@ -27,7 +27,7 @@
             </div>
             <h2 class="title mtop16"> {{ __('lg.connect.login') }} </h2>
             <div class="form mtop16">
-                {!! Form::open(['url' => '/', 'id' => 'form_connect','autocomplete' => 'off']) !!}
+                {!! Form::open(['url' => '/', 'id' => 'form_connect_login','autocomplete' => 'off']) !!}
 
                     <label for="email">{{ __('lg.connect.email') }}:</label>
                     <div class="group">
@@ -46,5 +46,8 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="{{ url('/static/js/app.js?v='.time()) }}"></script>
+    <script type="text/javascript" src="{{ url('/static/js/connect.js?v='.time()) }}"></script>
 </body>
 </html>

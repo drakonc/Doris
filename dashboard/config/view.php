@@ -5,9 +5,9 @@ use Jenssegers\Agent\Agent;
 $agent = new Agent();
 
 if($agent->isMobile()):
-    $path_view = 'views/webapp';
+    $path_view = 'views-mobile';
 else:
-    $path_view = 'views';
+    $path_view = 'views-desktop';
 endif;
 
 return [
