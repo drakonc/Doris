@@ -1,0 +1,115 @@
+.mdalert
+    align-items: center
+    background-color: rgba(0,0,0, .5)
+    color: #fff
+    display: none
+    height: 100vh
+    justify-content: center
+    position: fixed
+    width: 100%
+    z-index: 999
+    .md_alert_inside
+        background-color: #ffffff
+        border-radius: 12px
+        width: 86%
+    .md_alert_content
+        box-sizing: border-box
+        color: #333
+        overflow: hidden
+        padding: 24px
+        width: 100%
+        h2
+        h5
+            display: block
+            font-size: 16px
+            font-weight: 700
+            margin: 0px
+            padding-bottom: 0px
+            text-align: center
+            width: 100%
+        h5
+            font-size: 14px !important
+            font-weight: 500 !important
+            margin-top: 16px
+        .icon
+            display: block
+            margin-top: 24px
+            text-align: center
+            width: 100%
+            img
+                display: block
+                margin: 0px auto
+                width: 90px
+        ul
+           margin: 0px
+           margin-top: 16px
+           padding: 0px
+           list-style: none
+           li
+            margin-bottom: 2px
+            i
+                color: red
+                margin-right: 4px
+                position: relative
+                top: 2px
+    .md_alert_footer
+        display: block
+        width:  100%
+        .md_alert_btn_close
+            border-top: 1px solid #f0f0f0
+            color: #323742
+            display: block
+            font-weight: 700
+            padding: 16px
+            text-align: center
+            text-decoration: none
+            width: 100%
+        .md_alert_footer_other_btns
+            margin-left: 7%
+            width: 86%
+            a.btn
+                border: 0px !important;
+                border-radius: 18px
+                box-shadow: 2px 12px 12px 0px rgba(0,0,0,0 .15)
+                display: block
+                -webkit-box-shadow: 2px 12px 12px 0px rgba(0,0,0,0 .15)
+                -moz-box-shadow: 2px 12px 12px 0px rgba(0,0,0,0 .15)
+                margin-bottom: 24px
+                text-transform: uppercase
+                color: #fff
+                width: 100%
+            a.btn-success
+                background-color: #44bb5e
+            a.btn-primary
+                background-color: #0086d6
+            a.btn-info
+                background-color: #ffbb00
+            a.btn-danger
+                background-color: #f9461c
+
+.md_alert_animation_show
+    animation-timing-function: ease-in-out
+    animation: md_alert_show 0.5s forwards
+
+.md_alert_animation_hide
+    animation-timing-function: ease-in-out
+    animation: md_alert_hide 0.5s forwards
+
+@keyframes md_alert_show {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes md_alert_hide {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+

@@ -12,15 +12,18 @@
     <title>{{ __('lg.connect.login') }} - Doris APP</title>
 
     <link rel="icon" href="{{ url('/favicon.ico') }}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url('/static/css/mdalert.css?v='.time()) }}">
     <link rel="stylesheet" href="{{ url('/static/css/connect.css?v='.time()) }}">
 
 </head>
 <body>
     @include('components.loader_action')
+    @include('components.mdalert')
     <div class="page page_app">
         <div class="box">
             <div class="logo">
@@ -50,5 +53,6 @@
 
     <script type="text/javascript" src="{{ url('/static/js/app.js?v='.time()) }}"></script>
     <script type="text/javascript" src="{{ url('/static/js/connect.js?v='.time()) }}"></script>
+    <script type="text/javascript" src="{{ url('/static/js/mdalert.js?v='.time()) }}"></script>
 </body>
 </html>

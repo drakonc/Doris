@@ -14,8 +14,19 @@ document.addEventListener('DOMContentLoaded', function(){
 function connect_user_login() {
     loader_action_status('show');
     const url = `${base}/api-js/connect/login`;
-    console.log(url)
-    setTimeout(()=>{
-        loader_action_status('hide');
-    }, 5000)
+    var http = new XMLHttpRequest();
+    http.open('POST',url,true);
+    http.setRequestHeader('X-CSRF-TOKEN',csrftoken)
+    http.onreadystatechange = function() {
+        if(this.readyState == '4' && this.status == "200") {
+
+        }
+
+        if(this.status != 200) {
+            loader_action_status('hide');
+            console.log('Error desconocido');
+        }
+    }
+
+    http.send(new FormData(document.getElementById('form_connect_login')));
 }
