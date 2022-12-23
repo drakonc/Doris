@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-
+    
     <script type="text/javascript" src="{{ url('/static/js/app.js?v='.time()) }}"></script>
     <script type="text/javascript" src="{{ url('/static/js/mdalert.js?v='.time()) }}"></script>
     <script type="text/javascript" src="{{ url('/static/js/connect.js?v='.time()) }}"></script>

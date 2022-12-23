@@ -17,3 +17,10 @@ Route::get('/', function () { });
 
 
 Route::get('/login','ConnectController@getLogin')->name('getLogin');
+
+Route::prefix('/api-js')->group(function (){
+
+    //Modulo de Conexion
+    Route::post('/connect/login', 'ApiJS\ConnectController@PostLogin');
+
+});
