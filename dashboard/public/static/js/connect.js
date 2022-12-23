@@ -24,6 +24,12 @@ function connect_user_login() {
 
         if(this.status != 200) {
             loader_action_status('hide');
+            var data = {
+                title: "Doris App",
+                type: 'Error',
+                msg: 'Ha Ocurrido Un error desconocido',
+            }
+            mdalert(data)
             console.log('Error desconocido');
         }
     }

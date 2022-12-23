@@ -27,7 +27,7 @@ function mdalert(data) {
         content += `<h2>${title}</h2>`
 
         if(data.type) {
-            content += `<div class="icon"><img src="${base}/static/images/${data.type}.png"/></div>`
+            content += `<div class="icon"><img src="${base}/static/images/icons/${data.type}.png"/></div>`
         }
 
         if(data.msg) {
@@ -87,6 +87,7 @@ function mdalert(data) {
 function md_alert_status(status) {
     if(status === "show") {
         document.getElementsByTagName('body')[0].style.overflow = "hidden"
+        document.getElementsByClassName('wrapper')[0].classList.add('blur')
         md_alert_dom.style.display = 'flex';
         md_alert_dom.classList.remove('md_alert_animation_hide')
         md_alert_dom.classList.add('md_alert_animation_show')
@@ -94,6 +95,7 @@ function md_alert_status(status) {
 
     if (status === "hide") {
         document.getElementsByTagName('body')[0].style.removeProperty('overflow')
+        document.getElementsByClassName('wrapper')[0].classList.remove('blur')
         md_alert_dom.style.display = 'none';
         md_alert_dom.classList.add('md_alert_animation_hide')
         md_alert_dom.classList.remove('md_alert_animation_show')

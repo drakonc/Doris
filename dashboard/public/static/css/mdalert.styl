@@ -1,3 +1,6 @@
+.blur
+    filter: blur(2px)
+
 .mdalert
     align-items: center
     background-color: rgba(0,0,0, .5)
@@ -11,7 +14,8 @@
     .md_alert_inside
         background-color: #ffffff
         border-radius: 12px
-        width: 86%
+        min-width: 220px
+        width: 420px
     .md_alert_content
         box-sizing: border-box
         color: #333
@@ -113,3 +117,7 @@
     }
 }
 
+@media only screen and (max-width: 480px)
+    .mdalert
+        .md_alert_inside
+            width: 320px !important
