@@ -17,7 +17,7 @@ return [
         'v_password_required' => 'La contraseña es requerida',
         'v_password_min' => 'La Contraseña debe de tener al menos 8 caracteres',
         'connect_fail' => 'Correo electronico o Contraseña Errónea',
-        '' => '',
+        'show_password' => 'Mostrar contraseña',
         '' => '',
         '' => '',
         '' => '',

@@ -44,6 +44,7 @@
                             <i class="bi bi-fingerprint"></i>
                             {!! Form::password('password',null,['class' => 'input']) !!}
                         </div>
+                        <a href="#" class="show_password" data-state="hide">{{__("lg.connect.show_password")}}</a>
 
                         {!! Form::submit(__('lg.connect.connect'),['class' => 'btn mtop16']) !!}
                     {!! Form::close() !!}
@@ -51,7 +52,7 @@
             </div>
         </div>
     </div>
-    
+
     <script type="text/javascript" src="{{ url('/static/js/app.js?v='.time()) }}"></script>
     <script type="text/javascript" src="{{ url('/static/js/mdalert.js?v='.time()) }}"></script>
     <script type="text/javascript" src="{{ url('/static/js/connect.js?v='.time()) }}"></script>
