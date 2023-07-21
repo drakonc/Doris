@@ -42,9 +42,11 @@
                         <label for="password" class="mtop16">{{ __('lg.connect.password') }}:</label>
                         <div class="group">
                             <i class="bi bi-fingerprint"></i>
-                            {!! Form::password('password',null,['class' => 'input']) !!}
+                            {!! Form::password('password', ['class' => 'input', 'id' => 'input_password']) !!}
                         </div>
-                        <a href="#" class="show_password" data-state="hide">{{__("lg.connect.show_password")}}</a>
+                        <div class="action">
+                            <a href="#" class="show_password" data-state="hide" data-target="input_password">{{__("lg.connect.show_password")}}</a>
+                        </div>
 
                         {!! Form::submit(__('lg.connect.connect'),['class' => 'btn mtop16']) !!}
                     {!! Form::close() !!}
@@ -53,6 +55,7 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="{{ url('/static/js/lang/'.config('doris.languaje').'.js?v='.time()) }}"></script>
     <script type="text/javascript" src="{{ url('/static/js/app.js?v='.time()) }}"></script>
     <script type="text/javascript" src="{{ url('/static/js/mdalert.js?v='.time()) }}"></script>
     <script type="text/javascript" src="{{ url('/static/js/connect.js?v='.time()) }}"></script>

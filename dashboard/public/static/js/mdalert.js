@@ -10,10 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-function callback_alert(params1,params2) {
-    alert(params1);
-}
-
 function mdalert(data) {
     md_alert_content.innerHTML = "";
     if(data){

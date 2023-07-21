@@ -4,10 +4,28 @@ const csrftoken = document.getElementsByName("csrf-token")[0].getAttribute("cont
 
 document.addEventListener('DOMContentLoaded', function() {
     var loader_action = document.getElementById('loader_action');
-    loader_action_status('show');
-    setTimeout(()=>{
-        loader_action_status('hide');
-    }, 500)
+    var show_password = document.getElementsByClassName("show_password")
+    if(show_password){
+        for(var i= 0;i<show_password.length ;i++){
+            show_password[i].addEventListener('click', function(e){
+                e.preventDefault();
+                target = this.getAttribute('data-target')
+                estado = this.getAttribute('data-state')
+                if(estado == "hide"){
+                    document.getElementById(target).setAttribute('type','text')
+                    this.setAttribute('data-state','show')
+                    this.innerHTML = lang['hide_password']
+                }
+
+                if(estado == "show") {
+                    document.getElementById(target).setAttribute('type','password')
+                    this.setAttribute('data-state','hide')
+                    this.innerHTML = lang['show_password']
+                }
+
+            });
+        }
+    }
 });
 
 function loader_action_status(status) {
