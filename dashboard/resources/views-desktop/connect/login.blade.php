@@ -45,7 +45,7 @@
                             {!! Form::password('password', ['class' => 'input', 'id' => 'input_password']) !!}
                         </div>
                         <div class="action">
-                            <a href="#" class="show_password" data-state="hide" data-target="input_password">{{__("lg.connect.show_password")}}</a>
+                            <a href="#" class="show_password" data-state="hide" data-target="input_password" id="show_password_login">{{__("lg.connect.show_password")}}</a>
                         </div>
 
                         {!! Form::submit(__('lg.connect.connect'),['class' => 'btn mtop16']) !!}

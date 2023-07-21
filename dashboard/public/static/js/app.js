@@ -9,25 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
         for(var i= 0;i<show_password.length ;i++){
             show_password[i].addEventListener('click', function(e){
                 e.preventDefault();
-                target = this.getAttribute('data-target')
-                estado = this.getAttribute('data-state')
-                if(estado == "hide"){
-                    document.getElementById(target).setAttribute('type','text')
-                    this.setAttribute('data-state','show')
-                    this.innerHTML = lang['hide_password']
-                }
-
-                if(estado == "show") {
-                    document.getElementById(target).setAttribute('type','password')
-                    this.setAttribute('data-state','hide')
-                    this.innerHTML = lang['show_password']
-                }
-
+                show_password_fn(this.getAttribute('id'))
             });
         }
     }
 });
 
+// Loader action functio
 function loader_action_status(status) {
     if(status === "show") {
         document.getElementsByTagName('body')[0].style.overflow = "hidden"
@@ -42,6 +30,26 @@ function loader_action_status(status) {
         loader_action.classList.add('loader_action_animation_hide')
         loader_action.classList.remove('loader_action_animation_show')
 
+    }
+}
+
+// Show password field function
+function show_password_fn(activador) {
+    var act  = document.getElementById(activador)
+
+    target = act.getAttribute('data-target')
+    estado = act.getAttribute('data-state')
+
+    if(estado == "hide"){
+        document.getElementById(target).setAttribute('type','text')
+        act.setAttribute('data-state','show')
+        act.innerHTML = lang['hide_password']
+    }
+
+    if(estado == "show") {
+        document.getElementById(target).setAttribute('type','password')
+        act.setAttribute('data-state','hide')
+        act.innerHTML = lang['show_password']
     }
 }
 
